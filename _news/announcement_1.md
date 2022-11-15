@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: May 27, 2021
 inline: true
 ---
 
-A simple inline announcement.
+Starting my summer internship remotely at [Indian Institute of Science, Bangalore](https://iisc.ac.in/) with Prof. [Deepak Subramani](http://cds.iisc.ac.in/faculty/deepakns/) in the [Dept. of Computational and Data Sciences](https://cds.iisc.ac.in/).

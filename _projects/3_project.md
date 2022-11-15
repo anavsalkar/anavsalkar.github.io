@@ -1,81 +1,46 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Revolute Robotics 
+description: Revolute Robotics is a US-based startup working on hybrid rolling-flying robots for inspection and surviellance in complex environments. As a part-time Controls Engineer, I developed controllers for rolling on uneven terrains and autopilot software for aerial-terrestrial mobility. 
+img: assets/img/rr-mars.png
 importance: 3
-category: work
+category: 
 ---
+<h1 align="center">
+Controls @ <a href="https://www.revoluterobotics.com/">Revolute Robotics</a>
+</h1>
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<br />
+<p align="justify">
+Flying robots are incrasingly used for their high manoeuvrability and accessibility to difficult areas, but they falter in terms of flight time and are extrememly sensitve to collisions. The hybrid spherical robot consists of a multi-rotor aerial robot connected to a rolling spherical cage on the outside via gyroscopic gimbal. It saves energy by rolling on ground, while switching to aerial mode to overcome any obstacles. This has great applications such as exploration, mapping, search and rescue, monitoring in subterranean environments and agricultural fields. We were mentored by <a href="https://aliagha.site/">Dr. Ali Agha</a>, Research Technologist at NASA, JPL. 
+</p>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<br />
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### My Contributions
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+**Trajectory Tracking for Spherical Robot**: While controllers for multirotors have matured and widely available, my task was to develop controller for spherical rolling robots, based on a multirotor for traversing uneven terrains. The current literature on trajectory control of spherical rolling robots is limited to flat surfaces with no or minimal gradient. Leveraging on attitude control of the thrust by the multirotor, I designed a controller for stable performance even for high slopes with accurate trajectory tracking.  
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
+<div class="row" align="center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/rr-diff_terrain.gif" title="uneven terrain in Gazebo" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/rr-terrain_graph.png" title="tracking" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<iframe width="750" height="400" src="https://www.youtube.com/embed/sTh8RsQv6h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<br />
+
+**Autopilot Software**: There exist multiple modes such as rolling, flying, takeoff, land, stablise for the hybrid robot. For this purpose, I develped a finite-state machine autopilot software for smooth transitions between various modes which can interface with high-level commands by human operator. This is also currently being used in testing physical prototype.    
+
+
+
+<div class="row" align="center">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/rr-hybrid.gif" title="hybrid trajectories" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-```
-{% endraw %}

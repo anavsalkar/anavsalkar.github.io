@@ -1,80 +1,49 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: Aerial Robotics Kharagpur
+description: ARK is a student research group at IIT Kharagpur, mentored by Prof. Somesh Kumar. I am a part of the Controls team from my first year where I was introduced to robotics for the first time. Here, I have worked on various independent and colaborative projects. 
+img: assets/img/ark-ark_cropped.png
+importance: 5
+category: 
 ---
+<h1 align="center">
+<a href="https://arl-kgp.github.io/">Aerial Robotics Kharagpur</a>
+</h1>
+<br />
+As a member of **Controls** team, I have contribured to various projects mainly on control and path planning algorithms. Some of the projects are listed below.
+<br />
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Vaccine delivery using drone
+Important operations of search, rescue, medication distribution and incident response which are constrained by human accessibility, can be rapidly improved by aerial robotics. Believing in the same, Aerial Robotics Kharagpur in collaboration with ICMR developed a drone for Vaccine delivery. Mainly focused on delivering vaccines for geographically remote locations inaccessible by road, the drone is capable of reaching speeds up to 15 m/s mid-air and fly for about 50 minutes without payload on a single charge. The drone can easily fly up to a distance of up to 12 km round trip in flat regions and up to 10km in hilly regions. It can deliver a payload as heavy as 5kg. The video shows a test flight conducted in IIT Kharagpur campus on 01-05-2021. In this video, the drone - named "Merlin" - delivered a vaccine container from Mahatma Gandhi Stadium, IIT Kharagpur to Helipad, IIT Kharagpur.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<iframe width="750" height="400" src="https://www.youtube.com/embed/C1ndVA5SE-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<br />
+
+### Tilt-rotor quadrotor
+I modelled dynamics and aerodynamics on the vectored-thrust quadrotor using Simulink for numerical simulation. Subsequently, a PID controller for decoupled motion of pitch angle control and forward velocity using servo motor was developed. Using in-house 3D printing facilities, we developed a prototype for 5 degree of freedom drone.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/ark-simulink.png" title="Simulink Model" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/ark-5dof.gif" title="5DoF drone" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+<br />
+
+### Crazyflie Nanodrones
+We setup a [Crazyflie](https://www.bitcraze.io/products/crazyflie-2-1/) nanodrone setup with local positioning system in the lab. Further, I implemented timed-elastic band and potential field algorithms for obstacle avoidance.  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/ark-pot.gif" title="Obstacle Avoidance" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ark-formation.gif" title="ARK Formation" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}

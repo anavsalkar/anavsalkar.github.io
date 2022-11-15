@@ -1,80 +1,76 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Data-Driven Risk-sensitive MPC for Multi-agent Systems
+description: I worked on this project with Prof. Ashish Hota, for my Bachelors and Masters thesis. I developed a data-driven optimization-based controller (MPC) to constrain the risk associated with the motion plans for multi-agent systems.
+img: assets/img/thesis_bg.png
 importance: 1
-category: work
+category: 
+# github: https://github.com/anavsalkar/cvar_dist_mpc
 ---
+<h1 align="center">
+Data-Driven Risk-sensitive MPC for <br /> Multi-agent Systems
+</h1>
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<br />
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+    This project was awarded "Most Innovative Project" in Student Innovation Grant Program.
+    
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+**Preprint of this work is available [here](https://arxiv.org/pdf/2209.07793.pdf).** <br>
+**Parts of this work were submitted as [Bachelors](/assets/pdf/web-btp.pdf) thesis and ongoing [Masters](/assets/pdf/web-mtp-I.pdf) thesis (part I) at IIT Kharagpur.**
 
-<div class="row">
+<p align="justify">
+<!-- <b><b>Abstract</b></b>:  -->
+Safe navigation is a fundamental challenge in multi-robot systems due to the uncertainty surrounding the future trajectory of the robots that act as obstacles for each other. In this work, I propose a principled <b><b>data-driven</b></b> approach based on receding horizon optimization subject to collision avoidance constraints formulated as distributionally robust <b><b>conditional value-at-risk (CVaR)</b></b> of the distance between the agent and a polyhedral obstacle geometry. CVaR-based constraints capture the uncertainty against errors in the predictions of surrounding objects providing user the ability to dictate the risk-appetite. Additionally, tractable finite-dimensional approximations of this class of constraints are derived for <b><b>Wasserstein distributionally robust optimization</b></b> problems for low sample size. The effectiveness of the proposed approach is illustrated in a multi-drone navigation setting implemented in Gazebo platform.
+</p>
+
+Three key features of the project are:
+
+**Handling Uncertainty**:  Risk-sensitive behaviour of the agent depends on how the uncertainty in handled by the MPC. Based on predictions of other agents and collected state data, I developed techniques to formulate the data-driven risk constraints for collision avoidance under uncertainty.
+
+<div class="row" align="center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icra_alpha.gif" title="changing alpha" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+
+
+<div class="row" align="center">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/icra_noise.gif" title="changing noise" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+<br />
+
+**Collision Avoidance for Polyhedral Obstacles**: . I represent the surrounding in term of 3D polyhedrons to formulate collision avoidance constraints. This is more accurate representation, instead of circular or spherical assumption prevalent in prior works.
 
 
-<div class="row justify-content-sm-center">
+<div class="row" align="center">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/icra_obs_rep.png" title="obstacle representation" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<br />
+
+**Distributed Computation**: A single centralized problem has a large size and is computationally infeasible for real-time deployment. Therefore, I present a distributed approach that effectively exploits the parallel computation and inter-agent communication.
+
+<div class="row" align="center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icra_gazebo.gif" title="gazebo simulations" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icra_rpi.png" title="rpi implementation" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+
+
+
+
+
+
+

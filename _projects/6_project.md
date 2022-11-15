@@ -1,80 +1,55 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
+title: Vector Field Guidance for Fixed-Wing UAVs
+description: This work was carried out under Prof. Sikha Hota, IIT Kharagpur. I developed a new time-optimal guidance algorithm for fixed-wing UAVs that could closely match the performance of the discontinuous bang-bang controller. 
+img: assets/img/icc-thumbnail.png
+importance: 6
 category: fun
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<h1 align="center">
+Vector Field Guidance for Fixed-Wing UAVs
+</h1>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<br />
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
-<div class="row">
+**This work was presented at Indian Control Conference 2021:** 
+**[Minimum-time Path Convergence for UAVs in Wind Using Vector Field Guidance](https://ieeexplore.ieee.org/document/9703128).**
+
+
+
+<p align="justify">
+<!-- <b><b>Abstract</b></b>:  -->
+This work introduces a novel guidance algorithm for unmanned aircraft to converge to a smooth path optimizing time in the presence of wind. A Lyapunov vector field based method is used to achieve convergence and tracking. The proposed framework performs better in comparison with the similar work existing in literature. The presented approach modifies the vector field according to the velocity of the wind, facilitating faster convergence. A customised optimisation algorithm is then used to find a suitable design parameter for vector fields. To demonstrate the efficacy of the proposed approach, numerical simulations are shown and the results are compared with the optimal time paths obtained using optimal control theory.
+</p>
+<iframe width="770" height="400" src="https://www.youtube.com/embed/tiW4wwchpHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br />
+
+**Combined Vector Field**: Two vector fields, conservative and solenoidal are combined with appropriate weight functions such that the converging field dominates at larger distances and the tracking field dominates when the UAV is closer to the curve. The weighting parameter is then optimized to ensure fast convergence to desired path.    
+
+<div class="row" align="center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icc-conservative.png" title="Conservative Field" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icc-solenoidal.png" title="Solnoidal Field" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icc-combined.png" title="Combined Field" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
+
+<br />
+
+**Time-optimal Convergence in Wind**: Additional modifications are introduced that factor in the windspeed and directions to change the vector field for near-optimal performance compared to discontinuous min-max controller.   
+
+
+<div class="row" align="center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/icc-quiver.gif" title="Quiver plot" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/icc-stream.gif  " title="Streamline plot" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}

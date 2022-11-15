@@ -1,80 +1,61 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: Multi-Objective Planning in Stochastic Ocean Environments
+description: This work was carried out under Prof. Deepak Subramani, Indian Institute of Science, Bangalore during my summer internship. I worked on GPU-based algorithm for policies for autonomous agents in highly advective ocean flows.    
+img: assets/img/iisc-thumbnail.png
+importance: 2
+category: 
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<h1 align="center">
+Multi-Objective Planning in Stochastic Ocean Environments
+</h1>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<br />
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
-<div class="row">
+**This work was published in MDPI Journal of Marine Science and Engineering:** 
+**[GPU-Accelerated Multi-Objective Optimal Planning in Stochastic Dynamic Environments](https://www.mdpi.com/2077-1312/10/4/533).**
+
+<p align="justify">
+<!-- <b><b>Abstract</b></b>:  -->
+The importance of autonomous marine vehicles is increasing in a wide range of ocean science and engineering applications. <b><b>Multi-objective optimization</b></b>, where trade-offs between multiple conflicting objectives are achieved (such as minimizing expected mission time, energy consumption, and environmental energy harvesting), is crucial for planning optimal routes in stochastic dynamic ocean environments. This work extends the end-to-end GPU-accelerated single-objective <b><b>Markov Decision Process</b></b> path planner to compute optimal operating curves for multi-objective optimal planning. MDPs with scalarized rewards for multiple objectives are formulated and solved in idealized stochastic dynamic ocean environments with dynamic obstacles. Two simulated mission scenarios are completed to elucidate our approach and capabilities: (i) an agent moving from a start to target by minimizing travel time and net-energy consumption when harvesting solar energy in an uncertain flow; (ii) an agent attempting to cross a shipping channel with uncertain ship movement and flow. Optimal operating curves are computed in a fraction of the time that would be required for existing solvers and algorithms.
+</p>
+
+<iframe width="760" height="400" src="https://www.youtube.com/embed/p7DxnQij01Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+### Contributions
+
+**Multi-objective Rewards**: Utilizing a finite horizon, undiscounted, total cost MDP, I devised scalarised multi-objective reward function using weighted rewards for energy comsumption and required time. Solar energy harvested from a scalar field can also be accomodated to optimize net consumption. The GPU-accelerated algorithm was implemented on CUDA.    
+
+<div class="row" align="center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/iisc-channel.png" title="shipping channel schematic" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/iisc-pareto.png" title="time-energy curve" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+
+<br />
+
+
+
+**Operating Curve Analysis and Applications**: I analysed the operating curves for various problem parameters, showing several interesting characteristics and agent behaviors. It developed further applications on unknown obstacle positions and busy shipping channel crossing problem.    
+
+
+<div class="row" align="center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/iisc-huge.png" title="changing parameters" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+
+
+
+
+

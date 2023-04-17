@@ -20,7 +20,7 @@ I am a final-year dual degree student in Mechanical Engineering at the [Indian I
 
 <!-- <a href="/assets/pdf/web-cv.pdf"><i class="fas fa-file-pdf"></i> curriculum vitae</a> -->
 
-I will be joining [Intelligent Robotics and Autonomy Lab (iRaL)](https://vasileiostzoumas.com/students/) at [University of Michigan](https://www.engin.umich.edu/) in Ann Arbor to pursue doctoral studies, under the supervision of [Prof. Vasileios Tzoumas](https://vasileiostzoumas.com/) from Fall 2023. I aspire to work in the intersection of **controls**, **optimization**, and **learning** for safe navigation and control for robotics applications.  
+I will be joining [Intelligent Robotics and Autonomy Lab (iRaL)](https://vasileiostzoumas.com/students/) at [University of Michigan](https://www.engin.umich.edu/) in Ann Arbor to pursue doctoral studies, under the supervision of [Prof. Vasileios Tzoumas](https://vasileiostzoumas.com/) from Fall 2023. I aspire to work in the intersection of **controls**, **optimization**, and **learning** for safe navigation and control in robotics applications.  
 
 <!-- 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
